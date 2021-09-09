@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  /*=====CSS TEXT NOT SELECTABLE=====*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+body {
+  background: violet;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px 5px rgb(190, 96, 190);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(248, 151, 248, 0.767);
+  filter: blur(100px);
+}
+.fildes {
+  padding: 1rem;
+}
+.fildes input {
+  width: 100%;
+  display: block;
+  outline: none;
+  box-shadow: inset 0 0 10px 5px rgb(190, 96, 190);
+  background: violet;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.2rem 1.2rem;
+  color: #333;
+  border-radius: 4px;
+}
+.fildes input::placeholder {
+  color: #333;
+}
+.fildes button {
+  display: block;
+  background: violet;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  padding: 0.3rem 2rem;
+  box-shadow: 0 0 5px 5px rgb(206, 103, 206);
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.fildes button:hover {
+  box-shadow: 0 0 5px 5px rgba(112, 54, 112, 0.705);
+}
+
+.profile {
+  width: 100%;
+  background: #fff;
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile .img {
+  width: 100%;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 4px solid violet;
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  overflow: hidden;
+}
+.profile .img img {
+  max-width: 100%;
+}
+.profile .img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.267);
+  transform: scale(0);
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  border-radius: 50%;
+}
+.profile .img:hover.img::after {
+  transform: scale(1);
+}
+
+.profile .name {
+  font-size: 2rem;
+}
+.profile .age {
+  font-size: 1.6rem;
+}
+.profile .profession {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.profile .comment {
+  font-size: 1rem;
+}
